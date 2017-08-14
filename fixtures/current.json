@@ -1,0 +1,72 @@
+[
+    {
+        "number": 66,
+        "project_id": 651651,
+        "length": 2,
+        "team_strength": 10,
+        "stories": [
+            {
+                "kind": "story",
+                "id": 142858987,
+                "created_at": "2017-03-31T16:44:10Z",
+                "updated_at": "2017-08-12T01:25:55Z",
+                "estimate": 2,
+                "story_type": "feature",
+                "name": "GEODE-2740: Refactor cache factory and immediate relationships",
+                "current_state": "delivered",
+                "requested_by_id": 1259104,
+                "external_id": "GEODE-2740",
+                "integration_id": 43147,
+                "url": "https://www.pivotaltracker.com/story/show/142858987",
+                "project_id": 1258942,
+                "owner_ids": [
+                    1862362,
+                    2866055
+                ],
+                "labels": [
+                    {
+                        "id": 18485695,
+                        "project_id": 1258942,
+                        "kind": "label",
+                        "name": "gemfire-native-1000",
+                        "created_at": "2017-05-22T22:20:59Z",
+                        "updated_at": "2017-05-22T22:20:59Z"
+                    },
+                    {
+                        "id": 18086339,
+                        "project_id": 1258942,
+                        "kind": "label",
+                        "name": "geode-2729/globals",
+                        "created_at": "2017-03-29T21:24:03Z",
+                        "updated_at": "2017-03-29T21:24:03Z"
+                    }
+                ],
+                "owned_by_id": 1862362
+            },
+            {
+                "kind": "story",
+                "id": 146485389,
+                "created_at": "2017-06-01T20:50:05Z",
+                "updated_at": "2017-08-11T22:57:25Z",
+                "estimate": 3,
+                "story_type": "feature",
+                "name": "GEODE-3020: Use standard types in map",
+                "description": "in Struct.hpp\n\n  typedef std::unordered_map<CacheableStringPtr, CacheableInt32Ptr,\n                             dereference_hash<CacheableStringPtr>,\n                             dereference_equal_to<CacheableStringPtr>>",
+                "current_state": "finished",
+                "requested_by_id": 1833692,
+                "external_id": "GEODE-3020",
+                "integration_id": 43147,
+                "url": "https://www.pivotaltracker.com/story/show/146485389",
+                "project_id": 1258942,
+                "owner_ids": [
+                    1833692
+                ],
+                "labels": [],
+                "owned_by_id": 1833692
+            }
+        ],
+        "start": "2017-08-01T07:00:00Z",
+        "finish": "2017-08-15T07:00:00Z",
+        "kind": "iteration"
+    }
+]
