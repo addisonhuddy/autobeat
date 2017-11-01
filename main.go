@@ -40,12 +40,12 @@ func main() {
 
 	// create the url
 	done_url := fmt.Sprintf("https://www.pivotaltracker.com/services/v5/projects/%s/iterations?scope=done&limit=1&offset=-1", *projectPtr)
-	current_url := fmt.Sprintf("https://www.pivotaltracker.com/services/v5/projects/%s/iterations?scope=current&limit=1&offset=0", *projectPtr)
+	current_url := fmt.Sprintf("https://www.pivotaltracker.com/services/v5/projects/%s/iterations?scope=current&offset=2", *projectPtr)
 
 	// Make request to tracker
 	client := &http.Client{}
 
-	f, err := os.OpenFile("autobeat.md", os.O_CREATE|os.O_WRONLY, 0600)
+	f, err := os.OpenFile("autobeat.md", os.O_RDWR|os.O_CREATE, 0755)
 	if err != nil {
 		panic(err)
 	}
@@ -97,10 +97,6 @@ func PrintStories(s StoryResponse, jiraPtr *string) (buffer []byte) {
 	for i := 0; i < len(s[0].StoryList); i++ {
 
 		story := s[0].StoryList[i]
-
-		if story.StoryType == "release" {
-			continue
-		}
 
 		if len(story.ExternalID) == 0 {
 			writeStr := fmt.Sprintf("* %s [Tracker](%s)\n", story.Name, story.URL)
